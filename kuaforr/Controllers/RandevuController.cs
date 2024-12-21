@@ -2,9 +2,9 @@
 
 namespace kuaforr.Controllers
 {
-    public class AccountController : Controller
+    public class RandevuController : Controller
     {
-        public IActionResult Login()
+        public IActionResult Randevu()
         {
             return View();
         }

@@ -16,11 +16,11 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/css/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="css/templatemo-barber-shop.css" rel="stylesheet">
+    <link href="/css/templatemo-barber-shop.css" rel="stylesheet">
     <!--
 
     TemplateMo 585 Barber Shop
@@ -48,36 +48,42 @@
 
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1">Anasayfa</a>
+                            <a class="nav-link click" asp-controller="Home" asp-action="Index">Anasayfa</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">Hakkımızda</a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Randevu</a>
+                            <a class="nav-link click" asp-controller="Hakkimizda" asp-action="Hakkimizda">Hakkımızda</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">Ücret Listesi</a>
+                            <a class="nav-link click" asp-controller="Calisanlarimiz" asp-action="Calisanlarimiz">Çalışanlarımız</a>
                         </li>
 
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_5">İletişim</a>
+                            <a class="nav-link click" asp-controller="Randevu" asp-action="Randevu">Randevu Al</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="/Account/Login">Giriş Yap</a>
+                            <a class="nav-link click" asp-controller="Ucret" asp-action="Ucret">Ücret Listesi</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link click" asp-controller="Iletisim" asp-action="Iletisim">İletişim</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click" asp-controller="Giris" asp-action="Giris">Giriş Yap</a>
                         </li>
                     </ul>
                 </div>
             </nav>
 
             <div class="col-md-8 ms-sm-auto col-lg-9 p-0">
-                <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+                @RenderBody() <!-- Ana içerik buraya gelecek -->
+            
+              <!--  <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
 
                     <div class="container">
                         <div class="row">
@@ -86,9 +92,9 @@
                                 <h1 class="text-white mb-lg-3 mb-4"><strong>Feyzude <em>Hair Studio</em></strong></h1>
                                 <p class="text-black">Güzelliğin Adresine Hoş Geldiniz !</p>
                                 <br>
-                               
 
-                               
+
+
                             </div>
                         </div>
                     </div>
@@ -100,22 +106,24 @@
 
                         <a href="#booking-section" class="smoothscroll btn custom-btn custom-btn-italic mt-3">Randevu Alın</a>
                     </div>
-                </section>
+				  </section> -->
 
 
-                <section class="about-section section-padding" id="section_2">
+              <!--  <section class="about-section section-padding" id="section_2">
                     <div class="container">
                         <div class="row">
 
                             <div class="col-lg-12 col-12 mx-auto">
-                                <h2 class="mb-4">Saç ve Makyaj Uzmanlarımız</h2>
 
-                                @RenderBody()
+
+                                
 
                                 <div class="border-bottom pb-3 mb-5">
-                                    <p>Kuaför salonumuz, modern ve şık bir atmosferde, saç ve güzellik hizmetlerinde uzmanlaşmış profesyonel 
-                                        ekibimizle size en iyi hizmeti sunmayı amaçlamaktadır. Kaliteli ürünler, müşteri memnuniyeti odaklı 
-                                        yaklaşımımız ve yenilikçi çözümlerimizle, güzelliğinizi ortaya çıkarmak için buradayız.</p>
+                                    <p>
+                                        Kuaför salonumuz, modern ve şık bir atmosferde, saç ve güzellik hizmetlerinde uzmanlaşmış profesyonel
+                                        ekibimizle size en iyi hizmeti sunmayı amaçlamaktadır. Kaliteli ürünler, müşteri memnuniyeti odaklı
+                                        yaklaşımımız ve yenilikçi çözümlerimizle, güzelliğinizi ortaya çıkarmak için buradayız.
+                                    </p>
                                 </div>
                             </div>
 
@@ -168,28 +176,30 @@
 
                         </div>
                     </div>
-                </section>
-
-               <!-- <section class="featured-section section-padding">
-                    <div class="section-overlay"></div>
-
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-lg-10 col-12 mx-auto">
-                                <h2 class="mb-3">Get 32% Discount</h2>
-
-                                <p>Her ayın 16'sı</p>
-
-                                <strong>İndirim Kodu: 123feyzude</strong>
-                            </div>
-
-                        </div>
-                    </div>
-				 </section>-->
+                </section> -->
 
 
-                <section class="services-section section-padding" id="section_3">
+
+                <!-- <section class="featured-section section-padding">
+                     <div class="section-overlay"></div>
+
+                     <div class="container">
+                         <div class="row">
+
+                             <div class="col-lg-10 col-12 mx-auto">
+                                 <h2 class="mb-3">Get 32% Discount</h2>
+
+                                 <p>Her ayın 16'sı</p>
+
+                                 <strong>İndirim Kodu: 123feyzude</strong>
+                             </div>
+
+                         </div>
+                     </div>
+                  </section>-->
+
+
+              <!--  <section class="services-section section-padding" id="section_3">
                     <div class="container">
                         <div class="row">
 
@@ -247,9 +257,11 @@
 
                         </div>
                     </div>
-                </section>
+                </section>  -->
 
-                <section class="booking-section section-padding" id="booking-section">
+
+
+              <!--  <section class="booking-section section-padding" id="booking-section">
                     <div class="container">
                         <div class="row">
 
@@ -280,7 +292,7 @@
                                                 <select class="form-select form-control" name="bb-branch" id="bb-branch" aria-label="Default select example">
                                                     <option selected="">Şube Seçin</option>
                                                     <option value="Grünberger">Sakarya</option>
-                                                   
+
                                                 </select>
 
                                             </div>
@@ -302,10 +314,10 @@
                                 </form>
                             </div>
                         </div>
-                </section>
+                </section> -->
 
 
-                <section class="price-list-section section-padding" id="section_4">
+               <!-- <section class="price-list-section section-padding" id="section_4">
                     <div class="container">
                         <div class="row">
 
@@ -314,7 +326,7 @@
                                     <div class="mb-4">
                                         <h2 class="mb-2">Ücret Listemiz</h2>
 
-                                        
+
                                     </div>
 
                                     <div class="price-list-thumb">
@@ -379,7 +391,7 @@
                                     </div>
                                     <div class="price-list-thumb">
                                         <h6 class="d-flex">
-                                            Cilt Bakımı 
+                                            Cilt Bakımı
                                             <span class="price-list-thumb-divider"></span>
 
                                             <strong>300 TL</strong>
@@ -394,10 +406,10 @@
 
                         </div>
                     </div>
-                </section>
+                </section> -->
 
 
-                <section class="contact-section" id="section_5">
+               <!-- <section class="contact-section" id="section_5">
                     <div class="section-padding section-bg">
                         <div class="container">
                             <div class="row">
@@ -476,62 +488,29 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
 
-                <footer class="site-footer">
-                    <div class="container">
-                        <div class="row">
+               
 
-                            <div class="col-lg-12 col-12">
-                                <h4 class="site-footer-title mb-4">Adresimiz</h4>
-                            </div>
+                            <!-- <div class="col-lg-4 col-md-6 col-11">
+                                 <div class="site-footer-thumb">
+                                     <strong class="mb-1">Behrenstraße</strong>
 
-                            <div class="col-lg-4 col-md-6 col-11">
-                                <div class="site-footer-thumb">
-                                    <strong class="mb-1">Sakarya</strong>
+                                     <p>Behrenstraße 27, 10117 Berlin, Germany</p>
+                                 </div>
+                             </div>
 
-                                    <p>Sakarya Üniversitesi, Üniversite Caddesi, No:53, Feyzude Hair Studio</p>
-                                </div>
-                            </div>
+                             <div class="col-lg-4 col-md-6 col-11">
+                                 <strong class="mb-1">Weinbergsweg</strong>
 
-                           <!-- <div class="col-lg-4 col-md-6 col-11">
-                                <div class="site-footer-thumb">
-                                    <strong class="mb-1">Behrenstraße</strong>
+                                 <p>Weinbergsweg 23, 10119 Berlin, Germany</p>
+                             </div> -->
+                
 
-                                    <p>Behrenstraße 27, 10117 Berlin, Germany</p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-11">
-                                <strong class="mb-1">Weinbergsweg</strong>
-
-                                <p>Weinbergsweg 23, 10119 Berlin, Germany</p>
-                            </div> -->
-                        </div>
-                    </div>
-
-                    <div class="site-footer-bottom">
-                        <div class="container">
-                            <div class="row align-items-center">
-
-                                <div class="col-lg-8 col-12 mt-4">
-                                    <p class="copyright-text mb-0">
-                                        Copyright © 2036 Barber Shop
-                                        - Design: <a href="https://templatemo.com" rel="nofollow" target="_blank">TemplateMo</a>
-                                    </p>
-                                </div>
-
-                                <div class="col-lg-2 col-md-3 col-3 mt-lg-4 ms-auto">
-                                    <a href="#section_1" class="back-top-icon smoothscroll" title="Back Top">
-                                        <i class="bi-arrow-up-circle"></i>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                   
             </div>
+        </div>
+                        
 
             <!-- JAVASCRIPT FILES -->
             <script src="js/jquery.min.js"></script>
@@ -540,4 +519,45 @@
             <script src="js/custom.js"></script>
 
 </body>
+
+<!--<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+
+                <div class="col-lg-12 col-12">
+                    <h4 class="site-footer-title mb-4">Adresimiz</h4>
+                    </div>
+
+            <div class="col-lg-4 col-md-6 col-11">
+                <div class="site-footer-thumb">
+                    <strong class="mb-1">Sakarya</strong>
+
+                    <p>Sakarya Üniversitesi, Üniversite Caddesi, No:53, Feyzude Hair Studio</p>
+                </div>
+            </div>
+        </div>
+	</div>-->
+
+  <!--  <div class="site-footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-8 col-12 mt-4">
+                    <p class="copyright-text mb-0">
+                        Copyright © 2036 Barber Shop
+                        - Design: <a href="https://templatemo.com" rel="nofollow" target="_blank">TemplateMo</a>
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-3 mt-lg-4 ms-auto">
+                    <a href="#section_1" class="back-top-icon smoothscroll" title="Back Top">
+                        <i class="bi-arrow-up-circle"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer> -->
+
 </html>

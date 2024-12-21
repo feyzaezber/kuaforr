@@ -1,0 +1,54 @@
+﻿
+@{
+    <section class="booking-section section-padding" id="booking">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12 mx-auto">
+                    <div class="booking-form-wrap">
+                        <h2 class="text-center mb-4">Randevu Alın</h2>
+                        <p class="text-center mb-5">Lütfen bilgileri eksiksiz girin.</p>
+
+                        <form action="#" method="post" class="custom-form booking-form" id="bb-booking-form" role="form">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                    <input type="text" name="bb-name" id="bb-name" class="form-control" placeholder="Ad Soyad" required>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                    <input type="tel" class="form-control" name="bb-phone" placeholder="Telefon (örn: 05xxxxxxxxx)" pattern="05[0-9]{9}" required>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                    <input class="form-control" type="date" name="bb-date" id="bb-date" required>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                    <input class="form-control" type="time" name="bb-time" value="18:30">
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                    <select class="form-select form-control" name="bb-branch" id="bb-branch" required>
+                                        <option value="">Şube Seçin</option>
+                                        <option value="Sakarya">Sakarya</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                    <input type="number" name="bb-number" id="bb-number" class="form-control" placeholder="Kişi Sayısı" min="1" required>
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    <textarea name="bb-message" rows="3" class="form-control" id="bb-message" placeholder="Yorum (İsteğe Bağlı)"></textarea>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                                    <button type="submit" class="form-control btn btn-primary">Gönder</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

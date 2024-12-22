@@ -2,9 +2,9 @@
 
 namespace kuaforr.Controllers
 {
-    public class HakkimizdaController : Controller
+    public class HizmetlerimizController : Controller
     {
-        public IActionResult Hakkimizda()
+        public IActionResult Hizmetlerimiz()
         {
             return View();
         }

@@ -12,7 +12,7 @@ https://templatemo.com/tm-585-barber-shop
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #d6a354;
+  --primary-color:                #BA68C8;
   --secondary-color:              #c12828;
   --section-bg-color:             #f0f8ff;
   --custom-btn-bg-color:          #c12828;
@@ -372,7 +372,7 @@ strong {
 
 .hero-section::after {
   content: "";
-  background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+  background: linear-gradient(90deg, #fd2dd5 0%, #22C1C3 100%);
   position: absolute;
   top: 0;
   right: 0;

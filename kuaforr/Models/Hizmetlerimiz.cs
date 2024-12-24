@@ -10,6 +10,7 @@ namespace kuaforr.Models
         public string HizmetUcret { get; set; }
         public string HizmetFoto { get; set; }
         public virtual Calisanlarimiz? Calisanlarimiz { get; set; }
+        public virtual Randevu? Randevu { get; set; }
 
 
     }

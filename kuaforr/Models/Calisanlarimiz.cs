@@ -10,7 +10,9 @@ namespace kuaforr.Models
         public string CalisanSoyisim { get; set; }
         public string CalisanFoto { get; set; }
         public string CalisanMaas {  get; set; }
+        public int HizmetId {  get; set; }
         public virtual ICollection<Hizmetlerimiz>? Hizmetlerimizs { get; set; }
+        public virtual Randevu? Randevu { get; set; }
 
 
     }

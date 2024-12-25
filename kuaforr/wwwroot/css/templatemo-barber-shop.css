@@ -370,6 +370,7 @@ strong {
   }
 }
 
+
 .hero-section::after {
   content: "";
   background: linear-gradient(90deg, #fd2dd5 0%, #22C1C3 100%);

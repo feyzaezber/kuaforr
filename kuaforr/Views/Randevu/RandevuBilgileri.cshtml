@@ -1,0 +1,28 @@
+﻿@model IEnumerable<kuaforr.Models.Randevu>
+
+<h2>Randevu Bilgileri</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>İsim Soyisim</th>
+            <th>Telefon</th>
+            <th>Randevu Tarihi</th>
+            <th>Randevu Saati</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var randevu in Model)
+        {
+            <tr>
+                <td>@randevu.RandevuId</td>
+                <td>@randevu.RandevuIsimSoyisim</td>
+                <td>@randevu.RandevuSaati</td>
+                <td>@randevu.RandevuTarihi</td>
+                <td>@randevu.RandevuSaati</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

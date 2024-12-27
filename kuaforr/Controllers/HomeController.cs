@@ -15,7 +15,15 @@ namespace kuaforr.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var yetki = HttpContext.Session.GetString("Yetki");
+            if (yetki == "User" || yetki == "Admin")
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Giris", "Giris");
+            }
         }
 
         public IActionResult Privacy()

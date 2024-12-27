@@ -2,7 +2,7 @@
     ViewData["Title"] = "Giriş Yap";
 }
 
-<div class="container mt-5">
+<!--<div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-4">
             <h2 class="text-center mb-4">Giriş Yap</h2>
@@ -20,13 +20,62 @@
                 </div>
             </form>
 
-            <!-- Üye ol bağlantısı -->
+            
             <div class="text-center mt-3">
                 <p>Hesabın yok mu? <a href="/UyeOl/UyeOl" class="text-decoration-none">Üye Ol</a></p>
             </div>
         </div>
     </div>
+</div> -->
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h2 class="text-center mb-4">Giriş Yap</h2>
+            <!-- Hata mesajı varsa göster -->
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger text-center" role="alert">
+                    @ViewBag.ErrorMessage
+                </div>
+            }
+            <!-- Giriş formu -->
+            <form method="post" action="/Giris/Giris">
+                <div class="form-group mb-3">
+                    <label for="username" class="form-label">Kullanıcı Adı</label>
+                    <input type="text"
+                           class="form-control"
+                           id="username"
+                           name="username"
+                           placeholder="Kullanıcı adınızı girin"
+                           required />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="password" class="form-label">Şifre</label>
+                    <input type="password"
+                           class="form-control"
+                           id="password"
+                           name="password"
+                           placeholder="Şifrenizi girin"
+                           required />
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+                </div>
+            </form>
+
+            <!-- Üye ol bağlantısı -->
+            <div class="text-center mt-3">
+                <p>
+                    Hesabın yok mu?
+                    <a href="/UyeOl/UyeOl" class="text-decoration-none">Üye Ol</a>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
+
 
 
 

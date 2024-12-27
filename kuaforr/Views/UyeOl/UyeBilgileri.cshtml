@@ -1,0 +1,31 @@
+﻿@model List<kuaforr.Models.Uye>
+
+@{
+    ViewData["Title"] = "Üye Bilgileri";
+}
+
+<div class="container mt-5">
+    <h2>Üye Bilgileri</h2>
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Kullanıcı Adı</th>
+                <th>E-posta</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var uye in Model)
+            {
+                <tr>
+                    <td>@uye.UyeId</td>
+                    <td>@uye.UyeIsim</td>
+                    <td>@uye.UyeSoyisim</td>
+                    <td>@uye.UyeEmail</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
